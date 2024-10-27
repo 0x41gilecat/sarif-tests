@@ -1,0 +1,366 @@
+{
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "octoscan",
+                    "version": "(devel)"
+,
+                    "informationUri": "https://github.com/synacktiv/octoscan",
+                    "rules": [
+                        
+                        
+                            
+                            {
+                                "id": "bot-check"
+,
+                                "name": "BotCheck"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for if statements that are based on a bot identity."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for if statements that are based on a bot identity."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "dangerous-action"
+,
+                                "name": "DangerousAction"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for dangerous actions."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for dangerous actions."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "dangerous-checkout"
+,
+                                "name": "DangerousCheckout"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for dangerous checkout."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for dangerous checkout."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "dangerous-write"
+,
+                                "name": "DangerousWrite"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for dangerous write operation on $GITHUB_OUTPUT or $GITHUB_ENV."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for dangerous write operation on $GITHUB_OUTPUT or $GITHUB_ENV."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "expression-injection"
+,
+                                "name": "ExpressionInjection"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for expression injection."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for expression injection."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "known-vulnerability"
+,
+                                "name": "KnownVulnerability"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for known vulnerabilities."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for known vulnerabilities."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "local-action"
+,
+                                "name": "LocalAction"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for local actions."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for local actions."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "oidc-action"
+,
+                                "name": "OidcAction"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check for OIDC actions."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check for OIDC actions."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "repo-jacking"
+,
+                                "name": "RepoJacking"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Verify that external actions are pointing to a valid GitHub user or organization."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Verify that external actions are pointing to a valid GitHub user or organization."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "runner-label"
+,
+                                "name": "RunnerLabel"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Checks for GitHub-hosted and preset self-hosted runner labels in \"runs-on:\""
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Checks for GitHub-hosted and preset self-hosted runner labels in \"runs-on:\""
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "syntax-check"
+,
+                                "name": "SyntaxCheck"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Checks for GitHub Actions workflow syntax"
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Checks for GitHub Actions workflow syntax"
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                            ,
+                            {
+                                "id": "unsecure-commands"
+,
+                                "name": "UnsecureCommands"
+,
+                                "defaultConfiguration": {
+                                    "level": "error"
+                                },
+                                "properties": {
+                                    "description": "Check 'ACTIONS_ALLOW_UNSECURE_COMMANDS' env variable."
+,
+                                    "queryURI": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                                },
+                                "fullDescription": {
+                                    "text": "Check 'ACTIONS_ALLOW_UNSECURE_COMMANDS' env variable."
+
+                                },
+                                "helpUri": "https://github.com/synacktiv/octoscan?tab=readme-ov-file#rules"
+                            }
+                        
+                    ]
+                }
+            },
+            "results": [
+                
+                
+                    
+                    {
+                        "ruleId": "local-action"
+,
+                        "message": {
+                            "text": "Use of local action \"./.github/actions/custom-action\""
+
+                        },
+                        "locations": [
+                            {
+                                "physicalLocation": {
+                                    "artifactLocation": {
+                                        "uri": "../../../../../../../../../tmp/sarif-tests/.github/workflows/test.yml"
+,
+                                        "uriBaseId": "%SRCROOT%"
+                                    },
+                                    "region": {
+                                        "startLine": 20,
+                                        "startColumn": 15,
+                                        "endColumn": 45,
+                                        "snippet": {
+                                            "text": "        uses: ./.github/actions/custom-action\n              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                
+                    ,
+                    {
+                        "ruleId": "expression-injection"
+,
+                        "message": {
+                            "text": "Expression injection, \"github.event.pull_request.title\" is potentially untrusted."
+
+                        },
+                        "locations": [
+                            {
+                                "physicalLocation": {
+                                    "artifactLocation": {
+                                        "uri": "../../../../../../../../../tmp/sarif-tests/.github/workflows/test.yml"
+,
+                                        "uriBaseId": "%SRCROOT%"
+                                    },
+                                    "region": {
+                                        "startLine": 26,
+                                        "startColumn": 22,
+                                        "endColumn": 53,
+                                        "snippet": {
+                                            "text": "            echo ${{github.event.pull_request.title}}\n                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                
+                    ,
+                    {
+                        "ruleId": "dangerous-action"
+,
+                        "message": {
+                            "text": "Use of \"gh run download\" in a script."
+
+                        },
+                        "locations": [
+                            {
+                                "physicalLocation": {
+                                    "artifactLocation": {
+                                        "uri": "../../../../../../../../../tmp/sarif-tests/.github/workflows/test.yml"
+,
+                                        "uriBaseId": "%SRCROOT%"
+                                    },
+                                    "region": {
+                                        "startLine": 31,
+                                        "startColumn": 11,
+                                        "endColumn": 12,
+                                        "snippet": {
+                                            "text": "          gh run download a\n          ^~"
+
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                
+            ]
+        }
+    ]
+}
