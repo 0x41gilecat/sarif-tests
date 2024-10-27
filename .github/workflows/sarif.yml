@@ -19,7 +19,7 @@ jobs:
 
       - name: octoscan tests
         id: octoscan
-        uses: hugo-syn/octoscan-action@master
+        uses: hugo-syn/octoscan-action@v0
         with:
           disable_rules: "dangerous-action,oidc-action"
 
