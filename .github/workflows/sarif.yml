@@ -20,18 +20,11 @@ jobs:
       - name: octoscan tests
         id: octoscan
         uses: hugo-syn/octoscan-action@master
-
-      - name: debug
-        run: ls -asl
-
-      - name: debug2
-        run: echo "${{steps.octoscan.outputs.sarif_output}}"
+        with:
+          disable_rules: "dangerous-action,oidc-action"
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
-          # Path to SARIF file relative to the root of the repository
           sarif_file: octoscan.sarif
-          # Optional category for the results
-          # Used to differentiate multiple results for one commit
           category: octoscan
