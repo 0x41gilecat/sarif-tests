@@ -1,9 +1,14 @@
 ---
-name: sarif
+name: Octoscan
 
 on:
-  pull_request:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/*'
+  push:
+    paths:
+      - '.github/workflows/*'
 
 permissions:
       security-events: write
@@ -11,18 +16,18 @@ permissions:
       contents: read
 
 jobs:
-  sarif:
+  octoscan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: octoscan tests
-        id: octoscan
+      - id: octoscan
+        name: Run octoscan
         uses: hugo-syn/octoscan-action@v1
 
-      - name: Upload SARIF file
+      - name: Upload SARIF file to GitHub
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: octoscan.sarif
+          sarif_file: "${{steps.octoscan.output.sarif_output}}"
           category: octoscan
