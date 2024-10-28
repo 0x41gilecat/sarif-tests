@@ -23,4 +23,4 @@ jobs:
       
       - name: inject
         run: |
-            echo "This is not vulnerable"
+            echo "${{github.event.pull_request.title}}"
