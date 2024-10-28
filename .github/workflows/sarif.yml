@@ -20,8 +20,6 @@ jobs:
       - name: octoscan tests
         id: octoscan
         uses: hugo-syn/octoscan-action@v1
-        with:
-          disable_rules: "dangerous-action,oidc-action"
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
